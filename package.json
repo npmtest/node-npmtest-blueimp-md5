@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-blueimp-md5",     "homepage": "https://github.com/npmtest/node-npmtest-blueimp-md5",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-blueimp-md5.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [blueimp-md5 (v2.7.0)](https://github.com/blueimp/JavaScript-MD5)  [![npm package](https://img.shields.io/npm/v/npmtest-blueimp-md5.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-blueimp-md5) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-blueimp-md5.svg)](https://travis-ci.org/npmtest/node-npmtest-blueimp-md5)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-blueimp-md5",
+    "keywords": [
+        "coverage",
+        "test",
+        "blueimp-md5"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_blueimp_md5.js",
+    "name": "npmtest-blueimp-md5",
+    "nameAlias": "npmtest_blueimp_md5",
+    "nameOriginal": "npmtest-blueimp-md5",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-blueimp-md5.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "2017.4.25"
+}
